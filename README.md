@@ -85,13 +85,13 @@ Before you install rails, you should check to make sure that your system has the
           -  run
           -  bundle install
              to install the gem. 
-         Also remember to restart the Rails server.```\
+         Also remember to restart the Rails server.```
          
-**Step 2. Set up devise in your app**\
+**Step 2. Set up devise in your app**
         Run the following command in the terminal.
-         ```rails g devise:install```\
+         ```rails g devise:install```
     
-**Step 3. Configure Devise**\
+**Step 3. Configure Devise**
 Ensure you have defined default url options in your environments files. Open up ``config/environments/development.rb`` and add this line:
    ``config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }``
   before the end keyword.
@@ -106,16 +106,16 @@ Ensure you have defined default url options in your environments files. Open up�
        <%= yield %>``
   Open up *app/views/ideas/show.html.erb* and remove the line that says:
   ``<p id="notice"><%= notice %></p>``
-  Do the same for *app/views/comments/show.html.erb.* \
-  These lines are not necessary as we’ve put the notice in the *app/views/layouts/application.html.erb* file.\
+  Do the same for *app/views/comments/show.html.erb.* 
+  These lines are not necessary as we’ve put the notice in the *app/views/layouts/application.html.erb* file.
   **Step 4. Setup the User model**
   We’ll use a bundled generator script to create the User model.
    ``rails g devise user
      rails db:migrate``
-Coach: Explain what user model has been generated. What are the fields?\
+Coach: Explain what user model has been generated. What are the fields?
 **Step 5. Create your first user**
     Now that you have set everything up you can create your first user. Devise creates all the code and routes required to create accounts, log in, log out, etc.
-    Make sure your rails server is running, open http://localhost:3000/users/sign_up and create your user account.\
+    Make sure your rails server is running, open http://localhost:3000/users/sign_up and create your user account.
 **Step 6. Add sign-up and login links**
 All we need to do now is to add appropriate links or notice about the user being logged in in the top right corner of the navigation bar.
 In order to do that, edit ``app/views/layouts/application.html.erb`` add:
@@ -139,13 +139,13 @@ In order to do that, edit ``app/views/layouts/application.html.erb`` add:
       </ul>
  Finally, force the user to redirect to the login page if the user was not logged in. Open up ``app/controllers/application_controller.rb`` and add:\
   ``before_action :authenticate_user!``
-after *class ApplicationController < ActionController::Base*\
+after *class ApplicationController < ActionController::Base*
 Open your browser and try logging in and out from.
 
 ### Rails app deployment 
         Software deployment refers to the process of making the application work on a target device, whether it be a test server, 
-        production environment or a user's computer or mobile device.\
-        This steps will guide you on how to deploy an app in rails\
+        production environment or a user's computer or mobile device.
+        This steps will guide you on how to deploy an app in rails
 
 **- Check your Ruby and Rails versions:**
         ``$ ruby --version
@@ -211,24 +211,24 @@ This tutorial was tested with Mina version 1.2.3 - if there are newer versions
        
   ## 2. Online Questions and Answers
 
-   **• What is MVC in Ruby on Rails?** \
-This is the model-view-controller (MVC) architectural pattern, which enforces a separation between business logic from the input and presentation logic associated with a graphical user interface (GUI)\
+   **• What is MVC in Ruby on Rails?** 
+This is the model-view-controller (MVC) architectural pattern, which enforces a separation between business logic from the input and presentation logic associated with a graphical user interface (GUI)
 
    **• What is authentication and authorization?**
 
-Authentication is a confirmation of user identity, while authorization determines whether you can access a particular resource.\
+Authentication is a confirmation of user identity, while authorization determines whether you can access a particular resource.
 
-   **• What is a Devise?**\
+   **• What is a Devise?**
 
-Devise is the cornerstone gem for Ruby on Rails authentication.\ 
+Devise is the cornerstone gem for Ruby on Rails authentication.
 
    **• Explain what is “Yield” in Ruby on Rails?**
-A Ruby method that receives a code block invokes it by calling it with the “Yield”.\
+A Ruby method that receives a code block invokes it by calling it with the “Yield”.
 
-   **• 5) Explain what is ORM (Object-Relationship-Model) in Rails?**\
-ORM or Object Relationship Model in Rails indicate that your classes are mapped to the table in the database, and objects are directly mapped to the rows in the table.\
+   **• 5) Explain what is ORM (Object-Relationship-Model) in Rails?**
+ORM or Object Relationship Model in Rails indicate that your classes are mapped to the table in the database, and objects are directly mapped to the rows in the table.
 
-   **• What is Rolify and CanCanCan?**\
+   **• What is Rolify and CanCanCan?**
 Rolify is Roles library which supporting scope on resource object without any authorization enforcement. CanCanCan is an authorization library which restricts what resources a given user is allowed to access. All permissions are defined in a single location (the Ability class).
 
   
