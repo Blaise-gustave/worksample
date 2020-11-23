@@ -120,7 +120,7 @@ Coach: Explain what user model has been generated. What are the fields?\
 All we need to do now is to add appropriate links or notice about the user being logged in in the top right corner of the navigation bar.
 In order to do that, edit ``app/views/layouts/application.html.erb`` add:
 
-    ``<p class="navbar-text float-right">
+    <p class="navbar-text float-right">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -136,7 +136,7 @@ In order to do that, edit ``app/views/layouts/application.html.erb`` add:
           <a class="nav-link" href="/ideas">Ideas</a>
         </li>
         ...
-      </ul>``
+      </ul>
  Finally, force the user to redirect to the login page if the user was not logged in. Open up ``app/controllers/application_controller.rb`` and add:\
   ``before_action :authenticate_user!``
 after *class ApplicationController < ActionController::Base*\
@@ -190,7 +190,7 @@ This tutorial was tested with Mina version 1.2.3 - if there are newer versions
        
    **- Edit app/controllers/welcome_controller.rb and make it use the model object:**
    
-       ``class WelcomeController < ApplicationController
+       class WelcomeController < ApplicationController
         def index
             counter = Counter.find_or_create_by(name: "default")
             counter.value = (counter.value || 0) + 1
@@ -211,8 +211,9 @@ This tutorial was tested with Mina version 1.2.3 - if there are newer versions
        
   ## 2. Online Questions and Answers
 
-   **• What is MVC in Ruby on Rails?**\
+   **• What is MVC in Ruby on Rails?** \
 This is the model-view-controller (MVC) architectural pattern, which enforces a separation between business logic from the input and presentation logic associated with a graphical user interface (GUI)\
+
    **• What is authentication and authorization?**
 
 Authentication is a confirmation of user identity, while authorization determines whether you can access a particular resource.\
@@ -220,11 +221,14 @@ Authentication is a confirmation of user identity, while authorization determine
    **• What is a Devise?**\
 
 Devise is the cornerstone gem for Ruby on Rails authentication.\ 
-    **• Explain what is “Yield” in Ruby on Rails?**\
+
+   **• Explain what is “Yield” in Ruby on Rails?**
 A Ruby method that receives a code block invokes it by calling it with the “Yield”.\
-    **• 5) Explain what is ORM (Object-Relationship-Model) in Rails?**\
+
+   **• 5) Explain what is ORM (Object-Relationship-Model) in Rails?**\
 ORM or Object Relationship Model in Rails indicate that your classes are mapped to the table in the database, and objects are directly mapped to the rows in the table.\
-    **• What is Rolify and CanCanCan?**\
+
+   **• What is Rolify and CanCanCan?**\
 Rolify is Roles library which supporting scope on resource object without any authorization enforcement. CanCanCan is an authorization library which restricts what resources a given user is allowed to access. All permissions are defined in a single location (the Ability class).
 
   
