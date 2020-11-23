@@ -222,10 +222,10 @@ Authentication is a confirmation of user identity, while authorization determine
 
 Devise is the cornerstone gem for Ruby on Rails authentication.
 
-   **• Explain what is “Yield” in Ruby on Rails?**
+   **• Explain what is “Yield” in Ruby on Rails?**\
 A Ruby method that receives a code block invokes it by calling it with the “Yield”.
 
-   **• 5) Explain what is ORM (Object-Relationship-Model) in Rails?**
+   **•  Explain what is ORM (Object-Relationship-Model) in Rails?**
 ORM or Object Relationship Model in Rails indicate that your classes are mapped to the table in the database, and objects are directly mapped to the rows in the table.
 
    **• What is Rolify and CanCanCan?**
